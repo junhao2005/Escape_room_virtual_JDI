@@ -1,0 +1,765 @@
+/*CCS de Final*/
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    margin: 5%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #ff6600;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Galería de motos */
+.moto-gallery {
+    margin: 40px 0;
+}
+
+#KTM {
+    margin-top: 40%;
+} 
+#KTMT{
+    margin-top: 40%;
+}
+.moto-gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff6600;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gallery-item {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+/* Botón de llamada a la acción */
+.cta {
+    margin: 40px 0;
+}
+
+.cta h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff6600;
+}
+
+.cta button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta button:hover {
+    background-color: #e65c00;
+}
+
+/* Pie de página */
+footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+
+
+
+
+
+
+
+/*CSS del Index*/
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    margin: 5%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #ff6600;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Galería de marcas */
+#KTMI{
+    margin-top: 40%;
+}
+#KTMT{
+    margin-top: 40%;
+}
+
+.brands {
+    margin: 40px 0;
+}
+
+.brands h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff6600;
+}
+
+/* Galería de marcas */
+.brand-gallery {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: nowrap;
+    gap: 20px; 
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.brand-item {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(25% - 15px);
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+}
+
+.brand-item:hover {
+    transform: scale(1.05);
+}
+
+.brand-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.brand-item h3 {
+    font-size: 1.5rem;
+    margin: 15px 0 10px;
+    color: #ff6600;
+}
+
+.brand-item p {
+    font-size: 1rem;
+    color: #ccc;
+}
+/* Introducción y botón de inicio */
+.intro {
+    margin: 40px 0;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff6600;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    color: #ccc;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.intro button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.intro button:hover {
+    background-color: #8f3900;
+}
+
+/* Pie de página */
+footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+/* CSS KTM Mejorado */
+
+/* Estilos generales */
+.ktm-body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('img/fondo-ktm.jpg'); /* Fondo de la página */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Contenedor principal */
+.ktm-container {
+    max-width: 850px;
+    margin: 50px;
+    padding: 40px;
+    background-color: rgba(51, 51, 51, 0.8); /* Fondo semi-transparente */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    backdrop-filter: blur(5px); /* Efecto de desenfoque */
+    border: 1px solid rgba(255, 102, 0, 0.8);
+}
+
+/* Título principal */
+.ktm-title {
+    font-size: 3em;
+    color: #ff6600; /* Naranja KTM */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra para resaltar el texto */
+}
+
+/* Pistas */
+.ktm-hint {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #e1e1e1;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+/* Input del usuario */
+.ktm-input {
+    padding: 15px;
+    font-size: 1.1em;
+    width: 80%;
+    max-width: 100%;
+    border-radius: 10px;
+    border: 2px solid #ff6600;
+    background-color: #444;
+    color: #fff;
+    margin-bottom: 25px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ktm-input:focus {
+    border-color: #ff9900;
+    box-shadow: 0 0 8px rgba(255, 153, 0, 0.8);
+}
+
+/* Botón */
+.ktm-btn {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.ktm-btn:hover {
+    background-color: #ff9900;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 153, 0, 0.6);
+}
+
+/* Mensajes de error y éxito */
+.ktm-error-msg,
+.ktm-success-msg {
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.5s ease;
+}
+
+.ktm-error-msg {
+    background-color: #e74c3c; /* Rojo para errores */
+}
+
+.ktm-success-msg {
+    background-color: #27ae60; /* Verde para éxito */
+}
+
+
+
+
+
+
+/* css para YZF-R1*/
+.game {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.game-info {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.game-info p {
+    margin: 10px 0;
+}
+
+.moto-image img {
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.pruebas {
+    margin-bottom: 20px;
+}
+
+.prueba {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.prueba p {
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.prueba input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ff6600;
+    background-color: #444;
+    color: #fff;
+    width: 200px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.prueba button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.prueba button:hover {
+    background-color: #8f3900;
+}
+
+.pistas {
+    margin-bottom: 20px;
+}
+
+.pista-oculta {
+    display: none;
+}
+
+#form-respuesta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#form-respuesta label {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+#form-respuesta input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ff6600;
+    background-color: #333;
+    color: #fff;
+    width: 200px;
+    text-align: center;
+}
+
+#form-respuesta button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#form-respuesta button:hover {
+    background-color: #8f3900;
+}
+
+.mensaje {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+/*CSS de DUCATI*/
+/* Estilos generales del minijuego */
+.minijuego-container {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.minijuego-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #ff6600;
+}
+
+.minijuego-header p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+/* Estilos para el checkbox del minijuego */
+.minijuego-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+.minijuego-form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.minijuego-form input[type="checkbox"]:checked {
+    accent-color: #ff6600; /* Cambia el color del checkbox cuando está seleccionado */
+}
+/* Estilos para el formulario del minijuego */
+.minijuego-form {
+    margin-top: 20px;
+}
+
+.minijuego-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+.minijuego-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ff6600;
+    background-color: #333;
+    color: #fff;
+}
+
+.minijuego-form button[type="submit"] {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.minijuego-form button[type="submit"]:hover {
+    background-color: #8f3900;
+}
+
+/* Estilos para las pistas */
+.minijuego-pista {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.minijuego-mensaje {
+    font-size: 1.1rem;
+    color: #ff6600;
+    margin-top: 20px;
+}
+
+
+
+
+
+/*CSS de Perdida*/
+/* Estilos específicos para la página de "Juego Perdido" */
+
+/* Contenedor principal */
+.juego-perdido-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Título de la página */
+#juego-perdido-titulo {
+    font-size: 2.5rem;
+    color: #ff6600;
+    margin-bottom: 20px;
+}
+
+/* Párrafo de mensaje */
+#juego-perdido-mensaje {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+/* Botón para volver a intentar */
+#juego-perdido-boton {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#juego-perdido-boton:hover {
+    background-color: #8f3900;
+}
+
+
+
+/* CSS de BMW */
+
+/* Fondo y texto general */
+.bmw_body {
+    background-color: #1c1c1c; 
+    color: #f77700; 
+    font-family: 'Helvetica Neue', sans-serif; 
+    margin: 120px;
+    padding: 50px;
+}
+
+/* Contenedor principal */
+.bmw_container {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #2c2c2c;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Encabezado */
+.bmw_header h1 {
+    font-size: 4em;
+    font-weight: bold;
+    color: #f77700; 
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    display: block;
+    word-wrap: break-word; /* Asegura que el texto largo no se desborde */
+}
+
+.bmw_header p {
+    font-size: 1.3em;
+    margin: 20px 0;
+    color: #e1e1e1; /* Gris más claro */
+}
+
+/* Juego */
+.bmw_game {
+    background-color: #333333; /* Fondo más oscuro */
+    padding: 25px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 30px;
+}
+
+/* Información de tiempo */
+.bmw_game_info {
+    background-color: #3a3a3a;
+    color: #f77700;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    font-size: 1.2em;
+}
+
+/* Pruebas */
+.bmw_pruebas {
+    margin-bottom: 40px;
+}
+
+.bmw_prueba {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border: none;
+    box-shadow: none;
+}
+
+/* Inputs y formularios */
+.bmw_pruebas_input,
+.bmw_form_respuesta_input {
+    padding: 15px;
+    font-size: 1.2em;
+    width: 70%; /* Ajuste del tamaño */
+    max-width: 100%; /* Para que se adapte en pantallas más pequeñas */
+    border-radius: 8px;
+    background-color: #444444;
+    border: 2px solid #555555;
+    color: #f77700;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.bmw_pruebas_input:focus,
+.bmw_form_respuesta_input:focus {
+    border-color: #f77700;
+    box-shadow: 0 0 8px #f77700;
+}
+
+/* Botones */
+.bmw_pruebas_button,
+.bmw_form_respuesta_button {
+    background-color: #f77700;
+    color: #1c1c1c;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.bmw_pruebas_button:hover,
+.bmw_form_respuesta_button:hover {
+    background-color: #f77700;
+    transform: scale(1.05); /* Efecto sutil de aumento */
+}
+
+/* Mensajes */
+.bmw_mensaje {
+    font-size: 1.6em;
+    color: #f77700;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+/* Pie de página */
+.bmw_footer {
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 50px;
+    color: #e1e1e1;
+}
+
+.bmw_footer_p {
+    color: #f77700;
+}
