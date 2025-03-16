@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+
 $moto = $_POST['moto'];
 
 if (empty($moto)) {
@@ -9,7 +11,8 @@ if (empty($moto)) {
 } elseif (strtolower($moto) == 'ktm 300 tpi') {
     $_SESSION['reto_ktm'] = true;
     $_SESSION['intentos_ktm'] = 0; // Reiniciar los intentos si la respuesta es correcta
-    header('Location: yamaha.php'); // Redirigir a la página de finalización
+    $_SESSION['ktm_completado'] = true; // Marca el nivel KTM como completado
+    header('Location: yamaha.php'); // Redirige al siguiente nivel (Yamaha)
     exit();
 } else {
     if (!isset($_SESSION['intentos_ktm'])) {
@@ -33,4 +36,6 @@ if (empty($moto)) {
     header('Location: ktm.php');
     exit();
 }
+
+
 ?>

@@ -1,4 +1,11 @@
 <?php
+
+session_start();
+if (empty($_SESSION['ktm_completado'])) {
+    header('Location: ktm.php'); // Redirigir al nivel anterior (KTM)
+    exit();
+}
+
 $motos = [
     "Yamaha YZF-R1" => [
         "imagen" => "img/R1.png",
@@ -14,6 +21,8 @@ $motos = [
         ]
     ]
 ];
+
+
 
 $moto_secreta = array_rand($motos);
 $datos_moto = $motos[$moto_secreta];

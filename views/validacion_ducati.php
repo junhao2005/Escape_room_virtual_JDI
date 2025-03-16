@@ -1,4 +1,5 @@
 <?php
+
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
@@ -28,7 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $respuesta_usuario = strtolower(trim($_POST["respuesta"]));
 
             if ($respuesta_usuario == strtolower($respuesta_correcta)) {
-                header("Location: bmw.php");
+                $_SESSION['ducati_completado'] = true; // Marca el nivel Ducati como completado
+                header('Location: bmw.php'); // Redirige al siguiente nivel (BMW)
                 exit();
             } else {
                 $_SESSION['intentos']++;

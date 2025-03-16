@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (empty($_SESSION['bmw_completado'])) {
+    header('Location: bmw.php'); // Redirigir al nivel anterior (BMW)
+    exit();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>

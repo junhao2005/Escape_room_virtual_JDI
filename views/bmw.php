@@ -1,4 +1,11 @@
 <?php
+session_start();
+
+if (empty($_SESSION['ducati_completado'])) {
+    header('Location: ducati.php'); // Redirigir al nivel anterior (Ducati)
+    exit();
+}
+
 // Lista de motos con pistas y pruebas
 $motos = [
     "BMW M1000RR" => [
@@ -16,26 +23,27 @@ $motos = [
     ]
 ];
 
+// Inicializar sesión para el progreso del juego
+if (!isset($_SESSION['moto_secreta'])) {
+    $moto_secreta = array_rand($motos);
+    $_SESSION['moto_secreta'] = $moto_secreta;
+    $_SESSION['pregunta_actual'] = 0;
+    $_SESSION['fallos'] = 0;
+    $_SESSION['pistas_mostradas'] = 0;
+    $_SESSION['respuesta_final_correcta'] = false; // Estado de la última pregunta
+}
 
-// // Respuestas correctas
-// $respuestasCorrectas = [
-//     "2020",
-//     "4 cilindros en línea",
-//     "Suspensión de última generación"
-// ];
-
-$moto_secreta = array_rand($motos);
+$moto_secreta = $_SESSION['moto_secreta'];
 $datos_moto = $motos[$moto_secreta];
-$imagen_moto = $datos_moto["imagen"];
-$pistas = $datos_moto["pistas"];
-$pruebas = $datos_moto["pruebas"];
+$pistas = $datos_moto['pistas'];
+$pruebas = $datos_moto['pruebas'];
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Adivina la Moto</title>
+    <title>Adivina la Moto</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="bmw_body">
@@ -46,80 +54,38 @@ $pruebas = $datos_moto["pruebas"];
         </header>
         <section class="bmw_game">
             <div class="bmw_game_info">
-                <p><strong>Tiempo restante:</strong> <span id="tiempo">120</span> segundos</p>
+                <p><strong>Intentos fallidos:</strong> <span id="fallos"><?php echo $_SESSION['fallos']; ?></span></p>
             </div>
-            <div class="bmw_pruebas">
-                <div class="bmw_prueba" id="prueba1">
-                    <p><?php echo $pruebas[0]; ?></p>
-                    <input type="text" class="bmw_pruebas_input" id="respuesta1" placeholder="Tu respuesta">
-                    <button class="bmw_pruebas_button" onclick="verificarPrueba(1)">Responder</button>
+            <?php if ($_SESSION['pregunta_actual'] < count($pruebas)): ?>
+                <!-- Mostrar preguntas progresivamente -->
+                <div class="bmw_pruebas">
+                    <form action="validacion_bmw.php" method="post">
+                        <div class="bmw_prueba">
+                            <p><?php echo $pruebas[$_SESSION['pregunta_actual']]; ?></p>
+                            <input type="text" name="respuesta" placeholder="Tu respuesta" class="bmw_pruebas_input">
+                            <button type="submit" class="bmw_pruebas_button">Responder</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="bmw_prueba" id="prueba2" style="display:none;">
-                    <p><?php echo $pruebas[1]; ?></p>
-                    <input type="text" class="bmw_pruebas_input" id="respuesta2" placeholder="Tu respuesta">
-                    <button class="bmw_pruebas_button" onclick="verificarPrueba(2)">Responder</button>
+                <div class="bmw_pistas">
+                    <?php for ($i = 0; $i < $_SESSION['pistas_mostradas']; $i++): ?>
+                        <p class="bmw_pista"><?php echo $pistas[$i]; ?></p>
+                    <?php endfor; ?>
                 </div>
-                <div class="bmw_prueba" id="prueba3" style="display:none;">
-                    <p><?php echo $pruebas[2]; ?></p>
-                    <input type="text" class="bmw_pruebas_input" id="respuesta3" placeholder="Tu respuesta">
-                    <button class="bmw_pruebas_button" onclick="verificarPrueba(3)">Responder</button>
+            <?php elseif (!$_SESSION['respuesta_final_correcta']): ?>
+                <!-- Mostrar la pregunta final -->
+                <div class="bmw_final">
+                    <form action="validacion_bmw.php" method="post">
+                        <p>¡Última pregunta! ¿Cuál es el modelo de esta moto?</p>
+                        <input type="text" name="respuesta_final" placeholder="Tu respuesta final" class="bmw_form_respuesta_input">
+                        <button type="submit" class="bmw_form_respuesta_button">Adivinar</button>
+                    </form>
                 </div>
-            </div>
-            <div class="bmw_pistas">
-                <p id="pista1" class="bmw_pista_oculta"><?php echo $pistas[0]; ?></p>
-                <p id="pista2" class="bmw_pista_oculta"><?php echo $pistas[1]; ?></p>
-                <p id="pista3" class="bmw_pista_oculta"><?php echo $pistas[2]; ?></p>
-            </div>
-            <form class="bmw_form_respuesta" id="form-respuesta">
-                <label class="bmw_form_respuesta_label" for="respuesta">Introduce el modelo de la moto:</label>
-                <input type="text" class="bmw_form_respuesta_input" id="respuesta" name="respuesta" required>
-                <button type="submit" class="bmw_form_respuesta_button">Adivinar</button>
-            </form>
-            <p id="mensaje" class="bmw_mensaje"></p>
+            <?php endif; ?>
         </section>
         <footer class="bmw_footer">
-            <p class="bmw_footer_p">&copy; 2025 Escape Room de Motos. Jun Hao, Izan Izquierdo, David Vazquez.</p>
+            <p>&copy; 2025 Escape Room de Motos. Jun Hao, Izan Izquierdo, David Vazquez.</p>
         </footer>
     </div>
-
-    <script>
-        // Datos de la moto secreta
-        const motoSecreta = "<?php echo $moto_secreta; ?>";
-        const respuestasCorrectas = [
-            "2021", // Respuesta correcta para la primera pregunta
-            "4 cilindros en línea", // Respuesta correcta para la segunda pregunta
-            "suspensión electrónica" // Respuesta correcta para la tercera pregunta
-        ];
-
-        // Función para verificar las respuestas
-        function verificarPrueba(numero) {
-            const respuesta = document.getElementById('respuesta' + numero).value.toLowerCase();
-            if (respuesta === respuestasCorrectas[numero - 1].toLowerCase()) {
-                alert('¡Respuesta correcta!');
-                document.getElementById('prueba' + numero).style.display = 'none';
-                if (numero < 3) {
-                    document.getElementById('prueba' + (numero + 1)).style.display = 'block';
-                }
-                document.getElementById('pista' + numero).style.display = 'block';
-            } else {
-                alert('Respuesta incorrecta. Inténtalo de nuevo.');
-            }
-        }
-
-        // Temporizador
-        let tiempoRestante = 120;
-        function actualizarTiempo() {
-            const tiempoElement = document.getElementById("tiempo");
-            tiempoElement.textContent = tiempoRestante;
-
-            if (tiempoRestante === 0) {
-                clearInterval(intervaloTiempo);
-                alert(`¡Tiempo agotado!`);
-                window.location.href = "perdida.php"; // Redirigir al inicio
-            }
-            tiempoRestante--;
-        }
-        const intervaloTiempo = setInterval(actualizarTiempo, 1000);
-    </script>
 </body>
 </html>
