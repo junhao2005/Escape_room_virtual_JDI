@@ -17,13 +17,13 @@ if (!isset($mensaje)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escape Room</title>
+    <title>Adivina la Moto</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <div class="minijuego-container">
         <header class="minijuego-header">
-            <h1>Acertijo Ducati</h1>
+            <h1>Ducati</h1>
             <img src="../img/Ducati.png" alt="" width="200">
             <p>Responde las preguntas para desbloquear pistas y resolver el acertijo.</p>
         </header>

@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
-    <title>Reto Moto</title>
+    <title>Adivina la Moto</title>
 </head>
 <body class="ktm-body">
     <div id="container" class="ktm-container">
-        <h2 class="ktm-title">Reto KTM</h2>
+        <h2 class="ktm-title">KTM</h2>
         <p class="ktm-hint">Pista: Esta moto es una máquina potente y ligera diseñada para el enduro, con un sistema de inyección directa de combustible. ¿Cuál es?</p>
 
         <form method="post" action="validacion_ktm.php">

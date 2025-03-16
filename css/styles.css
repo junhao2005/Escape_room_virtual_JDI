@@ -1,4 +1,6 @@
-/*CCS de Final*/
+/* ==================== */
+/* CSS de Final */
+/* ==================== */
 /* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
@@ -37,10 +39,11 @@ header p {
 
 #KTM {
     margin-top: 40%;
-} 
-#KTMT{
+}
+#KTMT {
     margin-top: 40%;
 }
+
 .moto-gallery h2 {
     font-size: 2rem;
     margin-bottom: 20px;
@@ -111,14 +114,34 @@ footer {
     color: #ccc;
 }
 
+/* Media Queries para "Final" */
+@media (max-width: 700px) {
+    header h1 {
+        font-size: 2rem;
+    }
 
+    header p {
+        font-size: 1rem;
+    }
 
+    .gallery-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 
+    .cta h2 {
+        font-size: 1.5rem;
+    }
 
+    .cta button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
 
-
-
-/*CSS del Index*/
+/* ==================== */
+/* CSS de Index */
+/* ==================== */
 /* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
@@ -151,10 +174,10 @@ header p {
 }
 
 /* Galería de marcas */
-#KTMI{
+#KTMI {
     margin-top: 40%;
 }
-#KTMT{
+#KTMT {
     margin-top: 40%;
 }
 
@@ -168,12 +191,11 @@ header p {
     color: #ff6600;
 }
 
-/* Galería de marcas */
 .brand-gallery {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     flex-wrap: nowrap;
-    gap: 20px; 
+    gap: 20px;
     margin: 0 auto;
     max-width: 1200px;
 }
@@ -207,6 +229,7 @@ header p {
     font-size: 1rem;
     color: #ccc;
 }
+
 /* Introducción y botón de inicio */
 .intro {
     margin: 40px 0;
@@ -247,17 +270,38 @@ footer {
     color: #ccc;
 }
 
+/* Media Queries para "Index" */
+@media (max-width: 700px) {
+    header h1 {
+        font-size: 2rem;
+    }
 
+    header p {
+        font-size: 1rem;
+    }
 
+    .brand-gallery {
+        flex-wrap: wrap;
+    }
 
+    .brand-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 
+    .intro h2 {
+        font-size: 1.5rem;
+    }
 
+    .intro button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
 
-
-
-
-/* CSS KTM Mejorado */
-
+/* ==================== */
+/* CSS de KTM */
+/* ==================== */
 /* Estilos generales */
 .ktm-body {
     font-family: 'Arial', sans-serif;
@@ -269,7 +313,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('img/fondo-ktm.jpg'); /* Fondo de la página */
+    background-image: url('img/fondo-ktm.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -279,22 +323,22 @@ footer {
     max-width: 850px;
     margin: 50px;
     padding: 40px;
-    background-color: rgba(51, 51, 51, 0.8); /* Fondo semi-transparente */
+    background-color: rgba(51, 51, 51, 0.8);
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
     text-align: center;
-    backdrop-filter: blur(5px); /* Efecto de desenfoque */
+    backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 102, 0, 0.8);
 }
 
 /* Título principal */
 .ktm-title {
     font-size: 3em;
-    color: #ff6600; /* Naranja KTM */
+    color: #ff6600;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 3px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra para resaltar el texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* Pistas */
@@ -358,19 +402,37 @@ footer {
 }
 
 .ktm-error-msg {
-    background-color: #e74c3c; /* Rojo para errores */
+    background-color: #e74c3c;
 }
 
 .ktm-success-msg {
-    background-color: #27ae60; /* Verde para éxito */
+    background-color: #27ae60;
 }
 
+/* Media Queries para "KTM" */
+@media (max-width: 700px) {
+    .ktm-title {
+        font-size: 2em;
+    }
 
+    .ktm-hint {
+        font-size: 1em;
+    }
 
+    .ktm-input {
+        width: 90%;
+        font-size: 1em;
+    }
 
+    .ktm-btn {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
 
-
-/* css para YZF-R1*/
+/* ==================== */
+/* CSS de YZF-R1 */
+/* ==================== */
 .game {
     margin: 40px 0;
     text-align: center;
@@ -486,12 +548,34 @@ footer {
     margin-top: 20px;
 }
 
+/* Media Queries para "YZF-R1" */
+@media (max-width: 700px) {
+    .moto-image img {
+        max-width: 200px;
+    }
 
+    .prueba input {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 
+    .prueba button {
+        width: 100%;
+    }
 
+    #form-respuesta input {
+        width: 100%;
+    }
 
+    #form-respuesta button {
+        width: 100%;
+    }
+}
 
-/*CSS de DUCATI*/
+/* ==================== */
+/* CSS de Ducati */
+/* ==================== */
 /* Estilos generales del minijuego */
 .minijuego-container {
     text-align: center;
@@ -510,6 +594,7 @@ footer {
     font-size: 1.2rem;
     color: #ccc;
 }
+
 /* Estilos para el checkbox del minijuego */
 .minijuego-form label {
     display: block;
@@ -523,8 +608,9 @@ footer {
 }
 
 .minijuego-form input[type="checkbox"]:checked {
-    accent-color: #ff6600; /* Cambia el color del checkbox cuando está seleccionado */
+    accent-color: #ff6600;
 }
+
 /* Estilos para el formulario del minijuego */
 .minijuego-form {
     margin-top: 20px;
@@ -575,11 +661,30 @@ footer {
     margin-top: 20px;
 }
 
+/* Media Queries para "Ducati" */
+@media (max-width: 700px) {
+    .minijuego-header h1 {
+        font-size: 2rem;
+    }
+
+    .minijuego-header p {
+        font-size: 1rem;
+    }
+
+    .minijuego-form input[type="text"] {
+        font-size: 0.9rem;
+    }
+
+    .minijuego-form button[type="submit"] {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
 
 
-
-
-/*CSS de Perdida*/
+/* ==================== */
+/* CSS de Perdida */
+/* ==================== */
 /* Estilos específicos para la página de "Juego Perdido" */
 
 /* Contenedor principal */
@@ -625,15 +730,34 @@ footer {
     background-color: #8f3900;
 }
 
+/* Media Queries para "Perdida" */
+@media (max-width: 700px) {
+    .juego-perdido-container {
+        padding: 10px;
+    }
 
+    #juego-perdido-titulo {
+        font-size: 2rem;
+    }
 
+    #juego-perdido-mensaje {
+        font-size: 1rem;
+    }
+
+    #juego-perdido-boton {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+/* ==================== */
 /* CSS de BMW */
-
+/* ==================== */
 /* Fondo y texto general */
 .bmw_body {
-    background-color: #1c1c1c; 
-    color: #f77700; 
-    font-family: 'Helvetica Neue', sans-serif; 
+    background-color: #1c1c1c;
+    color: #f77700;
+    font-family: 'Helvetica Neue', sans-serif;
     margin: 120px;
     padding: 50px;
 }
@@ -655,24 +779,24 @@ footer {
 .bmw_header h1 {
     font-size: 4em;
     font-weight: bold;
-    color: #f77700; 
+    color: #f77700;
     letter-spacing: 2px;
     margin-bottom: 15px;
     text-transform: uppercase;
     line-height: 1.2;
     display: block;
-    word-wrap: break-word; /* Asegura que el texto largo no se desborde */
+    word-wrap: break-word;
 }
 
 .bmw_header p {
     font-size: 1.3em;
     margin: 20px 0;
-    color: #e1e1e1; /* Gris más claro */
+    color: #e1e1e1;
 }
 
 /* Juego */
 .bmw_game {
-    background-color: #333333; /* Fondo más oscuro */
+    background-color: #333333;
     padding: 25px;
     border-radius: 10px;
     border: none;
@@ -709,8 +833,8 @@ footer {
 .bmw_form_respuesta_input {
     padding: 15px;
     font-size: 1.2em;
-    width: 70%; /* Ajuste del tamaño */
-    max-width: 100%; /* Para que se adapte en pantallas más pequeñas */
+    width: 70%;
+    max-width: 100%;
     border-radius: 8px;
     background-color: #444444;
     border: 2px solid #555555;
@@ -741,7 +865,7 @@ footer {
 .bmw_pruebas_button:hover,
 .bmw_form_respuesta_button:hover {
     background-color: #f77700;
-    transform: scale(1.05); /* Efecto sutil de aumento */
+    transform: scale(1.05);
 }
 
 /* Mensajes */
@@ -762,4 +886,48 @@ footer {
 
 .bmw_footer_p {
     color: #f77700;
+}
+
+/* Media Queries para "BMW" */
+@media (max-width: 700px) {
+    .bmw_body {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .bmw_container {
+        padding: 20px;
+    }
+
+    .bmw_header h1 {
+        font-size: 2.5em;
+    }
+
+    .bmw_header p {
+        font-size: 1em;
+    }
+
+    .bmw_game_info {
+        font-size: 1em;
+    }
+
+    .bmw_pruebas_input,
+    .bmw_form_respuesta_input {
+        width: 90%;
+        font-size: 1em;
+    }
+
+    .bmw_pruebas_button,
+    .bmw_form_respuesta_button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .bmw_mensaje {
+        font-size: 1.2em;
+    }
+
+    .bmw_footer {
+        font-size: 1em;
+    }
 }
